@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Tours - VintageTripmart | Explore Our Travel Packages</title>
+    <meta name="description"
+        content="Browse VintageTripmart's curated tour packages to Bali, Paris, Maldives, Rajasthan, Kashmir, Dubai and more. Luxury, adventure, and budget-friendly options." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✈</span>
+                <span class="logo-text">VintageTripmart</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tours.html" class="nav-link active">Tours</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="query.html" class="nav-link nav-cta">Get Quote</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="section-tag">✦ Explore the World</div>
+        <h1>Our Tour Packages</h1>
+        <p>Handcrafted itineraries for every kind of traveler — luxury escapes, adventure treks, romantic getaways, and
+            cultural immersions.</p>
+    </section>
+
+    <!-- TOURS SECTION -->
+    <section class="section" style="padding-top: 40px;">
+        <div class="container">
+
+            <!-- Filter Buttons -->
+            <div class="tours-filters">
+                <button class="filter-btn active" data-filter="all" id="filterAll">All Destinations</button>
+                <button class="filter-btn" data-filter="international" id="filterIntl">International</button>
+                <button class="filter-btn" data-filter="domestic" id="filterDom">Domestic India</button>
+                <button class="filter-btn" data-filter="honeymoon" id="filterHoney">Honeymoon</button>
+                <button class="filter-btn" data-filter="adventure" id="filterAdv">Adventure</button>
+                <button class="filter-btn" data-filter="luxury" id="filterLux">Luxury</button>
+            </div>
+
+            <!-- Tour Cards Grid -->
+            <div class="tours-grid">
+
+                <div class="tour-card" id="tour-bali" data-category="international">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">International</span>
+                        <span class="tour-duration">🕐 7 Days / 6 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Bali, Indonesia</div>
+                        <h3 class="tour-name">Bali Paradise Escape</h3>
+                        <p class="tour-desc">Explore rice terraces, sacred temples, world-class beaches, and vibrant
+                            nightlife in Indonesia's most magical island.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Ubud Tour</span>
+                            <span class="tour-highlight">✦ Kuta Beach</span>
+                            <span class="tour-highlight">✦ Tanah Lot</span>
+                            <span class="tour-highlight">✦ Spa Day</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹45,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.9 (2.1k)</div>
+                                <a href="query.html" class="dest-btn" id="baliBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-paris" data-category="international">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">International</span>
+                        <span class="tour-duration">🕐 6 Days / 5 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Paris, France</div>
+                        <h3 class="tour-name">Paris Romance Tour</h3>
+                        <p class="tour-desc">The city of love — iconic Eiffel Tower sunset, art at the Louvre, gourmet
+                            dining, and charming Montmartre walks.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Eiffel Tower</span>
+                            <span class="tour-highlight">✦ Louvre Museum</span>
+                            <span class="tour-highlight">✦ Seine Cruise</span>
+                            <span class="tour-highlight">✦ Versailles</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹89,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.8 (1.8k)</div>
+                                <a href="query.html" class="dest-btn" id="parisBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-maldives" data-category="international honeymoon luxury">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">Honeymoon</span>
+                        <span class="tour-duration">🕐 5 Days / 4 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Maldives</div>
+                        <h3 class="tour-name">Maldives Honeymoon Bliss</h3>
+                        <p class="tour-desc">Overwater bungalows, translucent lagoons, bioluminescent beaches, and
+                            world-class snorkeling in paradise.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Water Villa</span>
+                            <span class="tour-highlight">✦ Snorkeling</span>
+                            <span class="tour-highlight">✦ Dolphin Cruise</span>
+                            <span class="tour-highlight">✦ Spa</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹1,20,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 5.0 (987)</div>
+                                <a href="query.html" class="dest-btn" id="maldivesBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-rajasthan" data-category="domestic">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">Domestic</span>
+                        <span class="tour-duration">🕐 8 Days / 7 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Rajasthan, India</div>
+                        <h3 class="tour-name">Royal Rajasthan Heritage</h3>
+                        <p class="tour-desc">Palace stays, camel safaris in the Thar desert, folk music evenings, and
+                            majestic fort visits across the royal state.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Jaipur Forts</span>
+                            <span class="tour-highlight">✦ Desert Safari</span>
+                            <span class="tour-highlight">✦ Udaipur Lake</span>
+                            <span class="tour-highlight">✦ Palace Stay</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹28,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.7 (3.2k)</div>
+                                <a href="query.html" class="dest-btn" id="rajBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-kashmir" data-category="domestic adventure">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">Adventure</span>
+                        <span class="tour-duration">🕐 7 Days / 6 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Kashmir, India</div>
+                        <h3 class="tour-name">Kashmir Paradise Gateway</h3>
+                        <p class="tour-desc">Snow-capped mountains, Dal Lake shikara rides, Pahalgam valleys, and
+                            Gulmarg skiing in heaven on earth.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Dal Lake</span>
+                            <span class="tour-highlight">✦ Shikara Ride</span>
+                            <span class="tour-highlight">✦ Gulmarg</span>
+                            <span class="tour-highlight">✦ Pahalgam</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹32,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.9 (4.1k)</div>
+                                <a href="query.html" class="dest-btn" id="kashmirBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-dubai" data-category="international luxury">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">Luxury</span>
+                        <span class="tour-duration">🕐 5 Days / 4 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Dubai, UAE</div>
+                        <h3 class="tour-name">Dubai Gold & Glamour</h3>
+                        <p class="tour-desc">Burj Khalifa views, desert safaris, luxury mall shopping, dhow cruise
+                            dinners, and the miracle garden.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Burj Khalifa</span>
+                            <span class="tour-highlight">✦ Desert Safari</span>
+                            <span class="tour-highlight">✦ Dubai Mall</span>
+                            <span class="tour-highlight">✦ Dhow Cruise</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹65,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.8 (2.5k)</div>
+                                <a href="query.html" class="dest-btn" id="dubaiBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-santorini" data-category="international honeymoon">
+                    <div class="tour-img" style="background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">Honeymoon</span>
+                        <span class="tour-duration">🕐 6 Days / 5 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Santorini, Greece</div>
+                        <h3 class="tour-name">Santorini Sunsetter</h3>
+                        <p class="tour-desc">Blue-domed churches, iconic caldera views, volcanic beaches, exquisite
+                            Greek cuisine, and magical sunsets from Oia.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Oia Village</span>
+                            <span class="tour-highlight">✦ Wine Tasting</span>
+                            <span class="tour-highlight">✦ Caldera Cruise</span>
+                            <span class="tour-highlight">✦ Fira Town</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹1,05,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.9 (1.3k)</div>
+                                <a href="query.html" class="dest-btn" id="santoriniBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-manali" data-category="domestic adventure">
+                    <div class="tour-img"
+                        style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">Adventure</span>
+                        <span class="tour-duration">🕐 6 Days / 5 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Manali-Leh, India</div>
+                        <h3 class="tour-name">Manali-Leh Road Adventure</h3>
+                        <p class="tour-desc">Epic Himalayan highway, high-altitude passes, royal Ladakhi monasteries,
+                            Pangong Lake, and adrenaline-pumping adventures.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Rohtang Pass</span>
+                            <span class="tour-highlight">✦ Pangong Lake</span>
+                            <span class="tour-highlight">✦ Monasteries</span>
+                            <span class="tour-highlight">✦ River Rafting</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹38,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.8 (2.7k)</div>
+                                <a href="query.html" class="dest-btn" id="manaliBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" id="tour-tokyo" data-category="international">
+                    <div class="tour-img"
+                        style="background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);">
+                        <div class="tour-img-overlay"></div>
+                        <span class="tour-category">International</span>
+                        <span class="tour-duration">🕐 8 Days / 7 Nights</span>
+                    </div>
+                    <div class="tour-info">
+                        <div class="tour-location">📍 Tokyo, Japan</div>
+                        <h3 class="tour-name">Tokyo & Kyoto Explorer</h3>
+                        <p class="tour-desc">Cherry blossoms, ancient temples, futuristic Shibuya Crossing, bullet
+                            trains, and authentic Japanese hospitality.</p>
+                        <div class="tour-highlights">
+                            <span class="tour-highlight">✦ Shibuya</span>
+                            <span class="tour-highlight">✦ Fushimi Inari</span>
+                            <span class="tour-highlight">✦ Mt. Fuji</span>
+                            <span class="tour-highlight">✦ Tea Ceremony</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div>
+                                <div class="tour-price-label">Starting from</div>
+                                <div class="tour-price">₹1,10,000 <span
+                                        style="font-size:0.75rem; font-weight:400; color: var(--text-muted);">/person</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tour-rating">⭐ 4.9 (1.9k)</div>
+                                <a href="query.html" class="dest-btn" id="tokyoBookBtn">Book Now →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-cta" style="margin-top: 60px;">
+                <p style="color: var(--text-secondary); margin-bottom: 20px;">Can't find your dream destination? We'll
+                    create a custom package just for you!</p>
+                <a href="query.html" class="btn btn-primary" id="customTourBtn">Request Custom Tour →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="section-tag" style="color: #ffd700;">✦ Personalized Just for You</div>
+            <h2>Can't Decide? Let Us Help!</h2>
+            <p>Share your preferences and our experts will curate a perfect trip.</p>
+            <a href="query.html" class="btn btn-gold" id="tourCtaBtn">Get Free Travel Consultation</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="nav-logo"><span class="logo-icon">✈</span><span class="logo-text">VintageTripmart</span>
+                </div>
+                <p>Your trusted partner for extraordinary travel experiences since 2009.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" id="fb-link2">f</a>
+                    <a href="#" class="social-link" id="ig-link2">in</a>
+                    <a href="#" class="social-link" id="yt-link2">▶</a>
+                    <a href="#" class="social-link" id="tw-link2">𝕏</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">All Tours</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="query.html">Plan Your Trip</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Popular Tours</h4>
+                <ul>
+                    <li><a href="#">Bali Paradise</a></li>
+                    <li><a href="#">Paris Romance</a></li>
+                    <li><a href="#">Maldives Bliss</a></li>
+                    <li><a href="#">Royal Rajasthan</a></li>
+                    <li><a href="#">Kashmir Getaway</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📍 123 Travel Lane, Connaught Place, New Delhi - 110001</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉ hello@vintagetripmart.com</p>
+                <p>🕐 Mon-Sat: 9 AM – 7 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VintageTripmart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

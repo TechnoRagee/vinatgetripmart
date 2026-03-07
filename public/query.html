@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan My Trip - VintageTripmart | Get a Free Travel Quote</title>
+    <meta name="description"
+        content="Submit your travel query to VintageTripmart. Tell us your dream destination, travel dates, and budget — we'll create a perfect itinerary for you." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✈</span>
+                <span class="logo-text">VintageTripmart</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="query.html" class="nav-link nav-cta active">Get Quote</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="section-tag">✦ Free Consultation</div>
+        <h1>Plan Your Dream Trip</h1>
+        <p>Fill in the details below and our travel experts will craft a personalized itinerary and get back to you
+            within 24 hours.</p>
+    </section>
+
+    <!-- QUERY FORM SECTION -->
+    <section class="query-section">
+        <div class="query-container">
+
+            <!-- Info Panel -->
+            <div class="query-info">
+                <h2>Why VintageTripmart?</h2>
+                <p>We don't just sell tours — we craft unforgettable experiences tailored perfectly to you.</p>
+                <div class="query-perks">
+                    <div class="perk-item">
+                        <div class="perk-icon">⚡</div>
+                        <div class="perk-text">
+                            <strong>24-Hour Response</strong>
+                            <span>Our team responds to every query within 24 hours with a detailed itinerary</span>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <div class="perk-icon">🎯</div>
+                        <div class="perk-text">
+                            <strong>100% Customized</strong>
+                            <span>Every trip is tailored to your taste, budget, and travel style</span>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <div class="perk-icon">💰</div>
+                        <div class="perk-text">
+                            <strong>Best Price Guarantee</strong>
+                            <span>We match competitor prices and offer exclusive member discounts</span>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <div class="perk-icon">🛡️</div>
+                        <div class="perk-text">
+                            <strong>Zero Spam Policy</strong>
+                            <span>Your information is secure. We never share your data with third parties</span>
+                        </div>
+                    </div>
+                    <div class="perk-item">
+                        <div class="perk-icon">📋</div>
+                        <div class="perk-text">
+                            <strong>Visa Assistance</strong>
+                            <span>Complete visa processing support for international destinations included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Query Form -->
+            <div class="query-form-card">
+                <h2 class="form-title">Send Your Query</h2>
+                <p class="form-subtitle">All fields marked with * are required</p>
+
+                <form id="queryForm" novalidate>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Rahul Sharma"
+                                required autocomplete="name" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com"
+                                required autocomplete="email" />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210"
+                                required autocomplete="tel" />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="destination">Destination *</label>
+                            <select id="destination" name="destination" class="form-input" required>
+                                <option value="">-- Select Destination --</option>
+                                <optgroup label="🌏 International">
+                                    <option value="Bali, Indonesia">Bali, Indonesia</option>
+                                    <option value="Paris, France">Paris, France</option>
+                                    <option value="Maldives">Maldives</option>
+                                    <option value="Dubai, UAE">Dubai, UAE</option>
+                                    <option value="Santorini, Greece">Santorini, Greece</option>
+                                    <option value="Tokyo, Japan">Tokyo, Japan</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Thailand">Thailand</option>
+                                    <option value="Switzerland">Switzerland</option>
+                                    <option value="New Zealand">New Zealand</option>
+                                </optgroup>
+                                <optgroup label="🇮🇳 Domestic India">
+                                    <option value="Rajasthan, India">Rajasthan</option>
+                                    <option value="Kashmir, India">Kashmir</option>
+                                    <option value="Kerala, India">Kerala</option>
+                                    <option value="Manali-Leh">Manali-Leh</option>
+                                    <option value="Goa, India">Goa</option>
+                                    <option value="Andaman Islands">Andaman Islands</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                </optgroup>
+                                <option value="Custom Destination">Other / Custom Destination</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="travelDate">Travel Date *</label>
+                            <input type="date" id="travelDate" name="travelDate" class="form-input" required />
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="travelers">Number of Travelers *</label>
+                            <input type="number" id="travelers" name="travelers" class="form-input" placeholder="e.g. 2"
+                                min="1" max="50" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="budget">Budget Category *</label>
+                        <select id="budget" name="budget" class="form-input" required>
+                            <option value="budget">💰 Budget (Economy)</option>
+                            <option value="standard" selected>⭐ Standard (Most Popular)</option>
+                            <option value="luxury">💎 Luxury (Premium)</option>
+                            <option value="ultra-luxury">👑 Ultra Luxury (5-Star & Above)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="message">Additional Requirements</label>
+                        <textarea id="message" name="message" class="form-input" rows="4"
+                            placeholder="Tell us about special requirements, preferences, dietary needs, occasions (anniversary, honeymoon, birthday), or anything else..."
+                            style="resize: vertical; min-height: 100px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-submit" id="submitQueryBtn">
+                        🚀 Submit My Travel Query
+                    </button>
+
+                    <p class="form-disclaimer">
+                        🔒 Your information is completely secure. By submitting, you agree to our
+                        <a href="#" style="color: var(--gold);">Privacy Policy</a>. No spam, ever.
+                    </p>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="nav-logo"><span class="logo-icon">✈</span><span class="logo-text">VintageTripmart</span>
+                </div>
+                <p>Your trusted partner for extraordinary travel experiences since 2009.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" id="fb-link3">f</a>
+                    <a href="#" class="social-link" id="ig-link3">in</a>
+                    <a href="#" class="social-link" id="yt-link3">▶</a>
+                    <a href="#" class="social-link" id="tw-link3">𝕏</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">All Tours</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Popular Tours</h4>
+                <ul>
+                    <li><a href="tours.html">Bali Paradise</a></li>
+                    <li><a href="tours.html">Paris Romance</a></li>
+                    <li><a href="tours.html">Maldives Bliss</a></li>
+                    <li><a href="tours.html">Royal Rajasthan</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📍 123 Travel Lane, Connaught Place, New Delhi - 110001</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉ hello@vintagetripmart.com</p>
+                <p>🕐 Mon-Sat: 9 AM – 7 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VintageTripmart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact VintageTripmart | Get in Touch</title>
+    <meta name="description"
+        content="Contact VintageTripmart for tour bookings, queries, and travel planning. Call, email, or visit our New Delhi office. We're here to help you travel better." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">✈</span>
+                <span class="logo-text">VintageTripmart</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tours.html" class="nav-link">Tours</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="query.html" class="nav-link nav-cta">Get Quote</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="section-tag">✦ We'd Love to Hear From You</div>
+        <h1>Get in Touch</h1>
+        <p>Whether you have a question, need travel advice, or want to book a tour — our friendly team is here to help.
+        </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" style="padding-top: 60px;">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="contact-info-card">
+                        <h2>Contact Information</h2>
+                        <p>Reach us through any of the channels below. We typically respond within a few hours during
+                            business days.</p>
+                        <div class="contact-items">
+                            <div class="contact-item" id="ci-phone">
+                                <div class="ci-icon">📞</div>
+                                <div class="ci-info">
+                                    <strong>Phone / WhatsApp</strong>
+                                    <span>+91 98765 43210<br />+91 11 2345 6789</span>
+                                </div>
+                            </div>
+                            <div class="contact-item" id="ci-email">
+                                <div class="ci-icon">✉️</div>
+                                <div class="ci-info">
+                                    <strong>Email Address</strong>
+                                    <span>hello@vintagetripmart.com<br />bookings@vintagetripmart.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item" id="ci-address">
+                                <div class="ci-icon">📍</div>
+                                <div class="ci-info">
+                                    <strong>Office Address</strong>
+                                    <span>123 Travel Lane, Connaught Place<br />New Delhi - 110001, India</span>
+                                </div>
+                            </div>
+                            <div class="contact-item" id="ci-hours">
+                                <div class="ci-icon">🕐</div>
+                                <div class="ci-info">
+                                    <strong>Business Hours</strong>
+                                    <span>Monday – Saturday: 9 AM – 7 PM<br />Sunday: 10 AM – 2 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map placeholder -->
+                    <div
+                        style="margin-top: 24px; background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-xl); height: 200px; display: flex; align-items: center; justify-content: center; color: var(--text-muted); font-size: 0.9rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 8px;">🗺️</div>
+                            <p>Google Maps Integration</p>
+                            <p style="font-size: 0.8rem;">Connaught Place, New Delhi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="query-form-card">
+                    <h2 class="form-title">Send a Message</h2>
+                    <p class="form-subtitle">We'll get back to you within 24 hours</p>
+
+                    <form id="contactLocalForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="contactName">Your Name *</label>
+                                <input type="text" id="contactName" class="form-input" placeholder="Full Name"
+                                    required />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" class="form-input" placeholder="you@example.com"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactSubject">Subject *</label>
+                            <select id="contactSubject" class="form-input" required>
+                                <option value="">-- Select Subject --</option>
+                                <option>Tour Booking Inquiry</option>
+                                <option>Custom Itinerary Request</option>
+                                <option>Visa &amp; Documentation Help</option>
+                                <option>Existing Booking Support</option>
+                                <option>Group/Corporate Travel</option>
+                                <option>Feedback / Complaint</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contactMsg">Your Message *</label>
+                            <textarea id="contactMsg" class="form-input" rows="5"
+                                placeholder="Tell us how we can help you..." required
+                                style="resize: vertical; min-height: 130px;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-submit" id="contactSubmitBtn">
+                            📩 Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section why-us">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">✦ FAQ</div>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+                <div class="feature-card" id="faq-1">
+                    <h3 style="margin-bottom: 8px;">How do I book a tour with VintageTripmart?</h3>
+                    <p>Simply fill out our <a href="query.html" style="color: var(--gold);">Travel Query Form</a>, and
+                        our team will reach out within 24 hours with a custom itinerary and pricing details.</p>
+                </div>
+                <div class="feature-card" id="faq-2">
+                    <h3 style="margin-bottom: 8px;">Do you offer group and corporate travel packages?</h3>
+                    <p>Absolutely! We specialize in group bookings (10-500 people) and corporate retreats. Contact us
+                        directly for special group pricing.</p>
+                </div>
+                <div class="feature-card" id="faq-3">
+                    <h3 style="margin-bottom: 8px;">What is your cancellation policy?</h3>
+                    <p>Cancellations made 30+ days before departure receive a full refund. 15-29 days: 50% refund. Less
+                        than 15 days: no refund. Travel insurance is strongly recommended.</p>
+                </div>
+                <div class="feature-card" id="faq-4">
+                    <h3 style="margin-bottom: 8px;">Do you assist with visa applications?</h3>
+                    <p>Yes! We provide complete visa documentation guidance and assistance for all major international
+                        destinations. Visa fees are not included in tour packages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <div class="section-tag" style="color: #ffd700;">✦ Your Adventure Awaits</div>
+            <h2>Ready to Pack Your Bags?</h2>
+            <p>Let our experts craft the perfect journey for you, completely free of charge.</p>
+            <a href="query.html" class="btn btn-gold" id="contactCtaBtn">Get My Free Travel Plan</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="nav-logo"><span class="logo-icon">✈</span><span class="logo-text">VintageTripmart</span>
+                </div>
+                <p>Your trusted partner for extraordinary travel experiences since 2009.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" id="fb-link5">f</a>
+                    <a href="#" class="social-link" id="ig-link5">in</a>
+                    <a href="#" class="social-link" id="yt-link5">▶</a>
+                    <a href="#" class="social-link" id="tw-link5">𝕏</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tours.html">All Tours</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="query.html">Plan Your Trip</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Popular Tours</h4>
+                <ul>
+                    <li><a href="tours.html">Bali Paradise</a></li>
+                    <li><a href="tours.html">Paris Romance</a></li>
+                    <li><a href="tours.html">Maldives Bliss</a></li>
+                    <li><a href="tours.html">Royal Rajasthan</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📍 123 Travel Lane, Connaught Place, New Delhi - 110001</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉ hello@vintagetripmart.com</p>
+                <p>🕐 Mon-Sat: 9 AM – 7 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 VintageTripmart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form local handler (shows toast without sending to backend)
+        document.getElementById('contactLocalForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('contactSubmitBtn');
+            btn.disabled = true;
+            btn.textContent = '⏳ Sending...';
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.textContent = '📩 Send Message';
+                this.reset();
+                // Use the toast system from main.js
+                const toastEl = document.createElement('div');
+                toastEl.className = 'toast success';
+                toastEl.innerHTML = '<span>✅</span><span>Message sent! We\'ll reply within 24 hours.</span>';
+                document.body.appendChild(toastEl);
+                requestAnimationFrame(() => toastEl.classList.add('show'));
+                setTimeout(() => { toastEl.classList.remove('show'); setTimeout(() => toastEl.remove(), 400); }, 5000);
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>
