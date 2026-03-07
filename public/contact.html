@@ -235,24 +235,49 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Contact form local handler (shows toast without sending to backend)
-        document.getElementById('contactLocalForm').addEventListener('submit', function (e) {
+        // Contact form handler to submit via API
+        document.getElementById('contactLocalForm').addEventListener('submit', async function (e) {
             e.preventDefault();
             const btn = document.getElementById('contactSubmitBtn');
             btn.disabled = true;
             btn.textContent = '⏳ Sending...';
-            setTimeout(() => {
+
+            const formData = {
+                name: document.getElementById('contactName').value,
+                email: document.getElementById('contactEmail').value,
+                subject: document.getElementById('contactSubject').value,
+                message: document.getElementById('contactMsg').value,
+            };
+
+            try {
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
                 btn.disabled = false;
                 btn.textContent = '📩 Send Message';
-                this.reset();
-                // Use the toast system from main.js
-                const toastEl = document.createElement('div');
-                toastEl.className = 'toast success';
-                toastEl.innerHTML = '<span>✅</span><span>Message sent! We\'ll reply within 24 hours.</span>';
-                document.body.appendChild(toastEl);
-                requestAnimationFrame(() => toastEl.classList.add('show'));
-                setTimeout(() => { toastEl.classList.remove('show'); setTimeout(() => toastEl.remove(), 400); }, 5000);
-            }, 1500);
+
+                if (data.success) {
+                    this.reset();
+                    // Show success toast
+                    const toastEl = document.createElement('div');
+                    toastEl.className = 'toast success';
+                    toastEl.innerHTML = `<span>✅</span><span>${data.message}</span>`;
+                    document.body.appendChild(toastEl);
+                    requestAnimationFrame(() => toastEl.classList.add('show'));
+                    setTimeout(() => { toastEl.classList.remove('show'); setTimeout(() => toastEl.remove(), 400); }, 5000);
+                } else {
+                    alert('Error: ' + data.message);
+                }
+            } catch (error) {
+                btn.disabled = false;
+                btn.textContent = '📩 Send Message';
+                alert('Something went wrong. Please check your connection and try again.');
+            }
         });
     </script>
 </body>
