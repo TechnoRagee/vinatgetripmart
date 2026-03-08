@@ -29,7 +29,7 @@ if (!process.env.MONGODB_URI) {
     process.exit(1);
 }
 mongoose
-    .connect(process.env.MONGODB_URI)
+    .connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
     .then(() => console.log('✅ Connected to MongoDB successfully!'))
     .catch((err) => {
         console.error('❌ MongoDB connection error:', err.message);
@@ -116,6 +116,9 @@ ${message || 'None'}
         if (error.name === 'ValidationError') {
             const messages = Object.values(error.errors).map((e) => e.message);
             return res.status(400).json({ success: false, message: messages.join(', ') });
+        }
+        if (error.name === 'MongooseServerSelectionError') {
+            return res.status(500).json({ success: false, message: 'Database unreachable right now. Please test on the live Render link instead!' });
         }
         res.status(500).json({ success: false, message: 'Server error. Please try again later.' });
     }
@@ -206,6 +209,6 @@ app.get('/{*splat}', (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
-    console.log(`🚀 VintageTripmart server running on http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 VintageTripmart server running on http://0.0.0.0:${PORT}`);
 });
