@@ -136,7 +136,16 @@ if (queryForm) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData),
             });
-            const result = await response.json();
+
+            let result;
+            const contentType = response.headers.get("content-type");
+            if (contentType && contentType.indexOf("application/json") !== -1) {
+                result = await response.json();
+            } else {
+                const text = await response.text();
+                console.error("Non-JSON response:", text);
+                throw new Error("Server returned an invalid response (might be unreachable or blocked).");
+            }
 
             if (result.success) {
                 showToast(result.message, 'success');
@@ -147,7 +156,8 @@ if (queryForm) {
                 showToast(result.message || 'Something went wrong. Please try again.', 'error');
             }
         } catch (err) {
-            showToast('Network error. Please check your connection and try again.', 'error');
+            console.error("Submission error:", err);
+            showToast(err.message || 'Network error. Please check your connection and try again.', 'error');
         } finally {
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;

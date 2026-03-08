@@ -28,6 +28,7 @@ if (!process.env.MONGODB_URI) {
     console.error('❌ MONGODB_URI is not set in environment variables!');
     process.exit(1);
 }
+mongoose.set('bufferCommands', false); // Fail fast instead of hanging form submissions
 mongoose
     .connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 5000 })
     .then(() => console.log('✅ Connected to MongoDB successfully!'))
@@ -113,14 +114,12 @@ ${message || 'None'}
         sendNotificationEmail(`New Query from ${name} for ${destination}`, emailBody);
 
     } catch (error) {
+        console.error("Query Submit Error:", error);
         if (error.name === 'ValidationError') {
             const messages = Object.values(error.errors).map((e) => e.message);
             return res.status(400).json({ success: false, message: messages.join(', ') });
         }
-        if (error.name === 'MongooseServerSelectionError') {
-            return res.status(500).json({ success: false, message: 'Database unreachable right now. Please test on the live Render link instead!' });
-        }
-        res.status(500).json({ success: false, message: 'Server error. Please try again later.' });
+        res.status(500).json({ success: false, message: 'Database connection failed. Please check your MongoDB IP whitelist.' });
     }
 });
 
