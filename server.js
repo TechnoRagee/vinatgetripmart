@@ -38,35 +38,45 @@ mongoose
     });
 
 // ─── Email Transporter Setup ───────────────────────────────────────────────────
+const EMAIL_USER = process.env.EMAIL_USER || 'vintagetripmart@outlook.com';
+const EMAIL_PASS = process.env.EMAIL_PASS;
+
 const transporter = nodemailer.createTransport({
-    host: 'smtp-mail.outlook.com',
+    host: 'smtp.office365.com', // More reliable for modern Outlook/O365
     port: 587,
-    secure: false, // true for 465, false for other ports
+    secure: false, // TLS
     auth: {
-        user: process.env.EMAIL_USER || 'vintagetripmart@outlook.com',
-        pass: process.env.EMAIL_PASS, // Needs to be generated in Microsoft Account (App Password)
+        user: EMAIL_USER,
+        pass: EMAIL_PASS,
     },
     tls: {
-        ciphers: 'SSLv3'
+        ciphers: 'SSLv3',
+        rejectUnauthorized: false
     }
 });
 
 // Helper to send email
 const sendNotificationEmail = async (subject, text) => {
-    if (!process.env.EMAIL_PASS) {
-        console.warn('⚠️ EMAIL_PASS not set. Skipping email notification.');
+    if (!EMAIL_PASS) {
+        console.warn('⚠️ EMAIL_PASS environment variable is NOT set. Email notifications are disabled.');
         return;
     }
+
+    console.log(`📡 Attempting to send email to ${EMAIL_USER}...`);
+
     try {
         await transporter.sendMail({
-            from: `"VintageTripmart Website" <${process.env.EMAIL_USER || 'vintagetripmart@outlook.com'}>`,
-            to: 'vintagetripmart@outlook.com',
+            from: `"VintageTripmart Website" <${EMAIL_USER}>`,
+            to: EMAIL_USER, // Sends the notification to yourself
             subject: subject,
             text: text,
         });
-        console.log('✅ Notification email sent.');
+        console.log('✅ Notification email sent successfully.');
     } catch (error) {
         console.error('❌ Error sending email:', error.message);
+        if (error.message.includes('auth') || error.message.includes('login')) {
+            console.error('💡 TIP: Check if your App Password is correct and Multi-Factor Auth is enabled on your Microsoft account.');
+        }
     }
 };
 
